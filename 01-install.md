@@ -60,9 +60,12 @@ This may take a while (half an hour in my case) to run all the VMs.
 
 ### DC/OS GUI
 
+https://dcos.io/docs/1.8/usage/
+
 Access dc/os GUI on [http://m1.dcos/](http://m1.dcos/)
 
-### Smack ON DC/OS
+Open Nodes, should able to see two Node:
+* 192.168.65.111
+* 192.168.65.60
 
-http://www.cakesolutions.net/teamblogs/smack-stack-on-dcos
-
+[Access mesos](http://m1.dcos/mesos/#/)
