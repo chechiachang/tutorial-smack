@@ -25,5 +25,13 @@ CPU 0.5
 Mem 1
 DSK 1
 
+task failed.
 
+### Cassandra Take 2
 
+Reconfig Node memory
+
+3 Node for each:
+CPU 0.5
+Mem 2048
+DSK 2
