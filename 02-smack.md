@@ -3,6 +3,12 @@ SMACK
 
 Spark, Mesos, Akka, Cassandra, and kafka.
 
+### Smack Guild
+
+https://dzone.com/articles/smack-stack-guide
+
+https://dzone.com/articles/smack-stack-guide
+
 ### Smack ON DC/OS
 
 http://www.cakesolutions.net/teamblogs/smack-stack-on-dcos
