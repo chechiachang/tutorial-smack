@@ -1,7 +1,11 @@
 SMACK
 ====
 
-Spark, Mesos, Akka, Cassandra, and kafka.
+### Reference Book
+
+Big Data SMACK
+A guide to Apache Spark, Mesos, Akka, Cassandra, and Kafka
+by Raul Estrada and Issac Ruiz
 
 ### Smack Guild
 
@@ -13,31 +17,11 @@ https://dzone.com/articles/smack-stack-guide
 
 http://www.cakesolutions.net/teamblogs/smack-stack-on-dcos
 
-Install Package
+###
 
+* Scala
 * Spark
 * Marathon
 * Akka (?)
 * Cassandra
 * Confluent Kafka
-
-### Cassandra Take 1
-
-Failed to complete the deploying task.
-
-Reconfig Node memory
-
-CPU 0.5
-Mem 1
-DSK 1
-
-task failed.
-
-### Cassandra Take 2
-
-Reconfig Node memory
-
-3 Node for each:
-CPU 0.5
-Mem 2048
-DSK 2
