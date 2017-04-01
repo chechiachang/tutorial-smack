@@ -17,7 +17,7 @@ https://dzone.com/articles/smack-stack-guide
 
 http://www.cakesolutions.net/teamblogs/smack-stack-on-dcos
 
-###
+### Stack
 
 * Scala
 * Spark
