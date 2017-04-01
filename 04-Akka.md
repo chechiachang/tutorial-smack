@@ -79,3 +79,27 @@ Like an actor's agent, represents actor and receives messages
 * ! operator work with ActorRefs
 * An actor receives a reference to the actor sent the message. Reference is accessed by the sender variable
 * sender is a reserved word
+
+### Actor Lifecycle
+
+Methods:
+0. (constructor): instantiate as in Java
+* preStart: called immediately after actor started
+* postStop: called immediately after actor stopped for cleaning work
+* preRestart: called immediately after actor restarted. Receive Throwable causing the restart
+* postRestart: called immediately after actor restarted. postRestart receive a Throwable causing the restart
+* receive
+
+### Actors Do Not Block Each Other
+
+* An actor blocks another actor, the first actor cannot attend to a request
+* An actor is locked while working on the first, you cannot attend the second request
+* deadlock: Actors block each other
+* prioritize message to prevent lock
+* Never use Thread.sleep, avoid use Thread. Modify your actor classes to achieve your goals
+
+### Communication is only via Messages
+
+### Messages must be immutable
+
+### Messages must be Self-Contained
