@@ -33,7 +33,7 @@ Kafka
 
 # Topic and Log
 
-* Topic is a category to which records are publishded
+* Topic is a category to which records are published
 * Topics have 0 to multiple subscribers
 * Maintains a partitioned log for each topic
 * Partition is ordered, immutable sequence of records, a structured commit log
@@ -47,3 +47,59 @@ Kafka
  * Act as the unit of parallelism
 
 ### Distribution
+
+* Partitions are distributed over the servers
+* Server handles data and request for a share of partition
+* Partition is replicated for fault tolerance
+* Partition has a leader server and 0 to many followers
+* Leader handle all read and write request
+* Elect new leader if the current leader failed
+* Each server acts as a leaders for some partition so load-balanced
+
+### Producer
+
+* Choose record to assign to which partition within the topic
+
+
+### Consumer
+
+* Consumers label themselves with a consumer group
+* Each record published to a topic is delivered to a consumer for each consumer group
+* Less group for load balancing, more group for more broadcast
+
+
+### Guarantees
+
+* Message to a partition with append in order
+* Consumer sees records in order as they stored in log
+* For a topic with replication factor N, will tolerate up to N -1 server failures
+
+### Queuing and Publish-subscribe
+* Read queue from server
+ * Scaling processing
+ * Not multi-subscribers, read and gone
+* Server publish to all consumers
+ * Allow broadcast to multiple subscribers
+ * Bad scaling if broadcast to every consumer
+* Kafka consumer group
+ * As a queue, divide up processing to a group of processes. For scaling.
+ * As publish, broadcast to group
+
+
+ Order
+ * Within a topic, Kafka assign partition to consumers in consumer group so each partition is consumed by exactly one consumer in the group.
+ * Ensure the consumer is the only reader of the partition and consumes data in order
+
+### Storage System
+
+* Fault tolerance
+* Allow producer to wait on acknowledgement until fully replicated to guarantee persistence
+* Disk structure scale well. Perform the same from 50KB to 50 TB
+* Allow client to control read position
+
+### Streaming System
+Real-time processing of streams
+* Streaming API
+
+
+# Zookeeper
