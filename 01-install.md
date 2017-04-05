@@ -69,3 +69,23 @@ Open Nodes, should able to see two Node:
 * 192.168.65.60
 
 [Access mesos](http://m1.dcos/mesos/#/)
+
+# DCOS 101
+
+https://dcos.io/docs/1.8/usage/tutorials/dcos-101/
+
+$ dcos auth login
+$ dcos package search redis
+$ dcos pakcage install redis
+
+$ dcos task
+$ dcos marathon app list
+$ dcos task log redis
+
+$ dcos node ssh --user=vagrant --master-proxy --mesos-id=$(dcos task redis --json | jq -r '.[] | .slave_id')
+
+http://192.168.65.60:9090/haproxy?stats
+
+### IOT pipeline
+
+https://dcos.io/docs/1.8/usage/tutorials/iot_pipeline/

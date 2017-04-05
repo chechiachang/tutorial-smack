@@ -102,4 +102,71 @@ Real-time processing of streams
 * Streaming API
 
 
-# Zookeeper
+# ZooKeeper
+
+Simple
+* Distributed coordination service for distributed applications
+* Allow process to coordinate through shared hierarchal namespace
+ * Znodes: Data registers, similar to file and directories
+* Keep date in memory
+
+Replicated
+* Ensemble: Zookeeper intend to be replicated over a set of hosts called an ensemble
+* Servers must all know each other
+
+Ordered
+* Keeps stamp for each update with a order number of all ZooKeeper transactions
+
+Fast
+* Good for Read-dominant workload, at ratio of about 10:1
+
+Leader Elect algorithm
+
+### Start ZooKeeper
+
+```
+bin/zkServer.sh start conf/zoo.cfg
+
+
+bin/zkCli.sh -server 127.0.0.1:2181
+
+# create a zNode
+create /zk_test my_data
+
+get /zk_test
+
+set /zk_test junk
+
+delete /zk_test
+```
+
+# Use Kafka
+
+##### Start ZooKeeper
+```
+bin/zookeeper-server-start.sh config/zookeeper.properties
+```
+port=2181
+
+##### Start a broker
+```
+bin/kafka-server-start.sh config/server.properties
+```
+port=9092
+
+##### Create a topic
+```
+bin/kafka-topic.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic amazing
+
+bin/kafka-topic.sh --list --zookeeper localhost:2181
+```
+##### Start a producer
+```
+bin/kafka-console-producer.sh --broker-list localhost:9092 --topic amazing
+```
+enter some message [enter]
+##### Start a consumer
+```
+bin/kafka-console-consumer.sh --zookeeper localhost:2181 --topic amazing --from-beginning
+```
+get message fromt producer
