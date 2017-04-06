@@ -1,2 +1,5 @@
 # dcos-smack-tutorial
-A get-started guild for SMACK on DC/OS
+
+A collection of nodes learning SMACK stack on DC/OS.
+
+Most of the content came from [DC/OS Offical Documentation](https://dcos.io/docs/1.9/)

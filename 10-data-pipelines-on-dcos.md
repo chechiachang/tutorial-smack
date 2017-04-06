@@ -6,6 +6,8 @@ https://dcos.io/docs/1.9/usage/tutorials/iot_pipeline/
 ##### DCOS Cassandra service
 https://github.com/mesosphere/dcos-cassandra-service
 
+https://github.com/mesosphere/dcos-zeppelin
+
 # Runs on local machine
 
 ##### install packages
