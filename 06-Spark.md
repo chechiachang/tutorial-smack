@@ -13,13 +13,35 @@ Modules:
 # Tutorial
 
 ```
-$ /bin/run-example SparkPi 10
+/bin/run-example SparkPi 10
 
-$ /bin/run-example SparkPi 1000
+/bin/run-example SparkPi 1000
 #took 71s
-
-$ /bin/spark-shell
 ```
+
+```
+/bin/spark-shell
+var num = 1 to 400000
+val myRDD = sc.parallelize(num)
+myRDD.filter (_% 2 != 0) .collect ()
+```
+
+```
+sc.version
+sc.appName
+sc.master
+sc.getExecutorMemoryStatus
+```
+
+##### Run in Cluster
+
+```
+sbin/start-master.sh
+# check localhost:8080
+
+sbin/start-slave.sh spark://davidchang-N550JK:7077
+```
+
 
 # Spark Architecture
 
