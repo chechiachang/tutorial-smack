@@ -12,4 +12,3 @@
 * [Kafka](08-kafka.md)
 * [Fast Data Pattern](09-fast-data-pattern.md)
 * [Data Pipelins on DCOS](10-data-pipelins-on-dcos.md)
-* [cql.md](cqlmd.md)
