@@ -29,3 +29,12 @@ https://docs.docker.com/engine/swarm/#feature-highlights
 * worker node reports state to manager
 
 ### Service
+* is the definition of tasks
+* is a command inside a container
+* replicated services model distributes a number of replica tasks among nodes
+* a task is the atomic scheduling unit of swarm
+
+### Load balancing
+* Ingress load balancing to expose services outside swarm
+* Swarm assign published port
+* external components and access service through published port
