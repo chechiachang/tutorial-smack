@@ -1,4 +1,4 @@
-package service;
+package lecture;
 
 import java.util.Scanner;
 

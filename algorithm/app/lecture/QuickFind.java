@@ -1,4 +1,4 @@
-package service;
+package lecture;
 
 /**
  * Created by davidchang on 4/11/17.

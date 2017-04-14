@@ -1,4 +1,4 @@
-package service
+package lecture;
 
 /**
   * Created by davidchang on 4/12/17.
@@ -61,4 +61,3 @@ object ListFunction extends App{
   def lengthFun[T](xs: List[T]): Int =
     (xs foldRight 0)( ??? )
 }
-
